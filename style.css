@@ -2783,7 +2783,7 @@ button:disabled{
 }
 
 .dropdown-btn i{
-    font-size:9px;
+    font-size:16px;
 }
 
 .dropdown-menu{
@@ -2809,4 +2809,313 @@ button:disabled{
         color:#087344;
     }
 
+}
+
+
+/* =========================================================
+   FORM FONT FIX — clean Bengali typography, 16px, non-italic
+   Only admission form, payment form, application print and receipt.
+========================================================= */
+#admission,
+#admission *,
+#payment,
+#payment *,
+#applicationPaper,
+#applicationPaper *,
+#receiptPaper,
+#receiptPaper * {
+    font-family: "Noto Sans Bengali", "Hind Siliguri", sans-serif !important;
+    font-style: normal !important;
+}
+
+#admission label,
+#admission input,
+#admission select,
+#admission textarea,
+#admission button,
+#admission .form-hint,
+#admission small,
+#payment label,
+#payment input,
+#payment select,
+#payment textarea,
+#payment button,
+#applicationPaper,
+#applicationPaper p,
+#applicationPaper span,
+#applicationPaper label,
+#applicationPaper td,
+#applicationPaper th,
+#applicationPaper strong,
+#receiptPaper,
+#receiptPaper p,
+#receiptPaper span,
+#receiptPaper label,
+#receiptPaper td,
+#receiptPaper th,
+#receiptPaper strong {
+    font-size: 16px !important;
+    font-style: normal !important;
+    line-height: 1.65;
+}
+
+#admission input,
+#admission select,
+#admission textarea,
+#payment input,
+#payment select,
+#payment textarea {
+    min-height: 44px;
+    padding: 10px 12px;
+}
+
+@media (max-width: 600px) {
+    #admission label,
+    #admission input,
+    #admission select,
+    #admission textarea,
+    #admission button,
+    #payment label,
+    #payment input,
+    #payment select,
+    #payment textarea,
+    #payment button {
+        font-size: 16px !important;
+    }
+}
+/* =========================================================
+   APPLICATION PAPER — ONLY REQUESTED FIX
+   আবেদনপত্রের লেখা 16px + Header সুন্দরভাবে সাজানো
+========================================================= */
+
+/* আবেদনপত্রের মূল লেখা */
+#applicationPaper,
+#applicationPaper p,
+#applicationPaper span,
+#applicationPaper label,
+#applicationPaper td,
+#applicationPaper th,
+#applicationPaper strong{
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-style:normal !important;
+    font-size:16px !important;
+    line-height:1.55;
+}
+
+
+/* =========================================================
+   APPLICATION HEADER
+   স্কুলের নাম
+   প্রতিষ্ঠিত
+   অনলাইন ভর্তি আবেদনপত্র
+   তারপর নিচে LOGO
+========================================================= */
+
+#applicationPaper .paper-header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    gap:0;
+
+    padding-bottom:12px;
+    border-bottom:2px solid #0a7042;
+}
+
+
+/* লেখার অংশ সবার আগে */
+#applicationPaper .paper-header > div{
+    order:1;
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+
+/* স্কুলের নাম */
+#applicationPaper .paper-header h1{
+    order:1;
+
+    width:100%;
+    margin:0;
+
+    color:#075d38;
+
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:23px !important;
+    font-weight:800;
+
+    line-height:1.35;
+    text-align:center;
+}
+
+
+/* প্রতিষ্ঠিত — স্কুলের নামের সাথে একই alignment */
+#applicationPaper .paper-header p{
+    order:2;
+
+    width:100%;
+    margin:2px 0 0;
+
+    color:#68766f;
+
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:16px !important;
+    font-weight:600;
+
+    line-height:1.5;
+    text-align:center;
+}
+
+
+/* অনলাইন ভর্তি আবেদনপত্র */
+#applicationPaper .paper-header h2{
+    order:3;
+
+    width:100%;
+    margin:5px 0 8px;
+
+    color:#1a382b;
+
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:18px !important;
+    font-weight:800;
+
+    line-height:1.5;
+    text-align:center;
+}
+
+
+/* LOGO — সব লেখার নিচে মাঝখানে */
+#applicationPaper .paper-header > img{
+    order:2;
+
+    width:72px;
+    height:72px;
+
+    margin:3px auto 0;
+
+    object-fit:cover;
+    border-radius:50%;
+
+    display:block;
+}
+
+
+/* =========================================================
+   APPLICATION PAPER TABLE
+========================================================= */
+
+#applicationPaper table{
+    font-family:"Noto Sans Bengali",sans-serif !important;
+}
+
+#applicationPaper th,
+#applicationPaper td{
+    font-size:16px !important;
+    line-height:1.5;
+    padding:7px 8px;
+}
+
+#applicationPaper th{
+    font-weight:800;
+}
+
+
+/* আবেদন নম্বর ও তারিখ */
+#applicationPaper .application-number-row{
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:16px !important;
+    line-height:1.5;
+}
+
+
+/* সেকশন শিরোনাম */
+#applicationPaper .paper-section-title{
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:16px !important;
+    line-height:1.5;
+}
+
+
+/* নিচের নোট */
+#applicationPaper .paper-footer-note{
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:16px !important;
+    line-height:1.5;
+}
+
+
+/* স্বাক্ষর */
+#applicationPaper .signature-row{
+    font-family:"Noto Sans Bengali",sans-serif !important;
+    font-size:16px !important;
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   APPLICATION PHOTO
+========================================================= */
+
+#applicationPaper .paper-student-photo img{
+    width:35mm;
+    height:35mm;
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   MOBILE
+   মোবাইলে পুরো ডিজাইন নষ্ট না করে শুধু লেখার সাইজ ঠিক রাখা
+========================================================= */
+
+@media(max-width:600px){
+
+    #applicationPaper .paper-header h1{
+        font-size:18px !important;
+    }
+
+    #applicationPaper .paper-header p{
+        font-size:14px !important;
+    }
+
+    #applicationPaper .paper-header h2{
+        font-size:15px !important;
+    }
+
+    #applicationPaper .paper-header > img{
+        width:58px;
+        height:58px;
+    }
+
+    #applicationPaper table,
+    #applicationPaper th,
+    #applicationPaper td{
+        font-size:12px !important;
+    }
+
+    #applicationPaper .application-number-row{
+        font-size:12px !important;
+    }
+
+    #applicationPaper .paper-section-title{
+        font-size:13px !important;
+    }
+
+    #applicationPaper .paper-footer-note{
+        font-size:12px !important;
+    }
+
+    #applicationPaper .signature-row{
+        font-size:11px !important;
+    }
 }
